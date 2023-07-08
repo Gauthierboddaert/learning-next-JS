@@ -3,12 +3,16 @@ import Category from "../Type/category";
 import getCategories from "../categories/api/getCategories";
 
 
-const useCategories = () => {
+const useCategories = (): Category[]|null => {
     const [categories, setCategories] = useState<Category[]|null>(null);
 
     useEffect(()=> {
-        console.log(getCategories());
+        getCategories().then((Category: Category[]) => {
+            setCategories(Category);
+        })
     });
+
+    return categories;
 }
 
 export default useCategories;
