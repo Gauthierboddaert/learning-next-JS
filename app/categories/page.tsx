@@ -18,8 +18,6 @@ const Admin = () => {
             <button onClick={changeDisplayValue}>display count</button>
         </div>
     );
-
-
 }
 
 export default Admin;
