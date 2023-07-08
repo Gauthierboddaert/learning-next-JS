@@ -5,7 +5,7 @@ import { useState } from "react";
 const Admin = () => {
 
     const [count, setCount] = useState<number>(0);
-    const [display, setDisplay] = useState<string>('hidden');
+    const [display, setDisplay] = useState<string>('flex');
 
     const changeDisplayValue = () => {
         'hidden' === display ? setDisplay('flex') : setDisplay('hidden');
